@@ -1,0 +1,36 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>myDemo</title>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <script src="vendor/angular/angular.min.js"></script>
+    <script src="vendor/angular/angular-route.js"></script>
+    <script src="vendor/echarts/echarts.js"></script>
+
+    <script src="js/app.js"></script>
+
+    <script src="data-view/pie-ctrl.js"></script>
+    <script src="data-view/line-ctrl.js"></script>
+    <script src="data-view/home-ctrl.js"></script>
+    <script src="data-view/bar-ctrl.js"></script>
+
+
+
+</head>
+<body ng-app='app'>
+
+<h2>My World</h2>
+<ul>
+    <li><a href="#/">首页</a></li>
+    <li><a href="#/pie">饼状图</a></li>
+    <li><a href="#/bar">柱状图</a></li>
+    <li><a href="#/line">折线图</a></li>
+</ul>
+
+<div ng-view></div>
+
+
+</body>
+</html>
