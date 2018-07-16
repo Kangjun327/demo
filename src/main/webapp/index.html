@@ -2,12 +2,18 @@
 <head>
     <meta charset="utf-8">
     <title>myDemo</title>
-
+     <!--  jquery-->
     <script src="vendor/jquery/jquery.min.js"></script>
-
+    <!--angular-->
     <script src="vendor/angular/angular.min.js"></script>
     <script src="vendor/angular/angular-route.js"></script>
     <script src="vendor/echarts/echarts.js"></script>
+    <!--日历组件-->
+    <link href="css/fullcalendar.css" rel="stylesheet" />
+    <link href='css/fullcalendar.print.css' rel='stylesheet' media='print' />
+    <script src='vendor/jquery/jquery-ui.custom.min.js'></script>
+    <script src="component/fullcalendar.js"></script>
+
 
     <script src="js/app.js"></script>
 
@@ -22,12 +28,14 @@
 <body ng-app='app'>
 
 <h2>My World</h2>
+
 <ul>
     <li><a href="#/">首页</a></li>
     <li><a href="#/pie">饼状图</a></li>
     <li><a href="#/bar">柱状图</a></li>
     <li><a href="#/line">折线图</a></li>
 </ul>
+
 
 <div ng-view></div>
 
