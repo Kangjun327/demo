@@ -3,8 +3,9 @@ angular.module("app").controller("homeCtrl", homeCtrl);
 homeCtrl.$inject = ['$scope'];
 
 function homeCtrl() {
-
-    $(document).ready(function () {
+    init();
+    function init(){
+        /* $(document).ready(function ()*/
         var date = new Date();
         var d = date.getDate();
         var m = date.getMonth();
@@ -158,6 +159,6 @@ function homeCtrl() {
         });
 
 
-    });
+    }
 
 }

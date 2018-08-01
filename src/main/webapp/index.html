@@ -2,43 +2,75 @@
 <head>
     <meta charset="utf-8">
     <title>myDemo</title>
-     <!--  jquery-->
+    <!--  jquery-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <!--angular-->
     <script src="vendor/angular/angular.min.js"></script>
     <script src="vendor/angular/angular-route.js"></script>
     <script src="vendor/echarts/echarts.js"></script>
     <!--日历组件-->
-    <link href="css/fullcalendar.css" rel="stylesheet" />
-    <link href='css/fullcalendar.print.css' rel='stylesheet' media='print' />
+    <link href="css/fullcalendar.css" rel="stylesheet"/>
+    <link href='css/fullcalendar.print.css' rel='stylesheet' media='print'/>
     <script src='vendor/jquery/jquery-ui.custom.min.js'></script>
     <script src="component/fullcalendar.js"></script>
 
+    <script src="js/script.js"></script>
+    <script src="js/moment.min.js"></script>
 
     <script src="js/app.js"></script>
-
+    <script src="index.js"></script>
     <script src="data-view/pie-ctrl.js"></script>
     <script src="data-view/line-ctrl.js"></script>
     <script src="data-view/home-ctrl.js"></script>
     <script src="data-view/bar-ctrl.js"></script>
 
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pace.min.css">
+    <link rel="stylesheet" href="css/clock/style.css">
 
 
 </head>
-<body ng-app='app'>
 
-<h2>My World</h2>
+<body ng-app='app' class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
+<header class="app-header navbar">
+    <ul class="nav navbar-nav d-md-down-none">
+        <li class="nav-item px-4">
+            <a class="nav-link" href="#/">首页</a>
+        </li>
+        <li class="nav-item px-4">
+            <a class="nav-link" href="#/pie">饼状图</a>
+        </li>
+        <li class="nav-item px-4">
+            <a class="nav-link" href="#/bar">柱状图</a>
+        </li>
+        <li class="nav-item px-4">
+            <a class="nav-link" href="#/line">折线图</a>
+        </li>
+    </ul>
+    <ul class="nav navbar-nav ml-auto">
+    </ul>
+</header>
+<div class="app-body" >
 
-<ul>
-    <li><a href="#/">首页</a></li>
-    <li><a href="#/pie">饼状图</a></li>
-    <li><a href="#/bar">柱状图</a></li>
-    <li><a href="#/line">折线图</a></li>
-</ul>
+<main class="aside-menu" style="margin:10px 20px 10px 10px;width:30%;height:89%;border-radius: 6px;overflow: auto ;">
+    <!--  <div class="tab-content">-->
+    <div id="clock" class="light">
+        <div class="display">
+            <div class="weekdays"></div>
+            <div class="ampm"></div>
+            <div class="alarm"></div>
+            <div class="digits"></div>
+        </div>
+    </div>
+    <!--   </div>-->
+</main>
+</div>
+</body>
 
-
-<div ng-view></div>
-
+<div ng-view style="overflow: auto ;height:92%"></div>
 
 </body>
 </html>
